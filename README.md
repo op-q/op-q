@@ -1,8 +1,6 @@
 <div align="center">
-
-<img src="./image.png" alt="image" width="270" />
-
 <h2><code>.-- . .-.. -.-. --- -- .</code></h2>
+<img src="./image.png" alt="image" width="180" />
 
 <p>
 <strong>Software Engineer, Stockholm</strong><br /> Love building platforms, systems, tools and games !

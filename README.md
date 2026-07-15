@@ -1,16 +1,27 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**op-q/op-q** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<img src="./image.png" alt="image" width="180" />
 
-Here are some ideas to get you started:
+<h2><code>.-- . .-.. -.-. --- -- .</code></h2>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<p>
+<strong>Software Engineer, Stockholm</strong><br /> Love building platforms, systems, tools and games !
+</p>
+
+
+<p>
+<code>Python</code>
+&nbsp;·&nbsp;
+<code>Rust</code>
+&nbsp;·&nbsp;
+<code>Next.js</code>
+&nbsp;·&nbsp;
+<code>Postgres</code>
+&nbsp;·&nbsp;
+<code>WebSockets</code>
+&nbsp;·&nbsp;
+<code>Access Control</code>
+&nbsp;·&nbsp;
+<code>Protocol Design</code>
+</p>
+</div>

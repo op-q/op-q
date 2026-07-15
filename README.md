@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./image.png" alt="image" width="180" />
+<img src="./image.png" alt="image" width="270" />
 
 <h2><code>.-- . .-.. -.-. --- -- .</code></h2>
 

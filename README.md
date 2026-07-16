@@ -1,7 +1,7 @@
 <div align="center">
-<img src="./image.png" alt="image" width="80" />
+<img src="./image.png" alt="image" width="100" />
 
-<p>
-<strong><code>Software Engineer</code></strong><br /> Building platforms, systems, tools, games & anything else...
-</p>
+
+<p><strong><code>Software Engineer</code></strong><p>
+<p>Building platforms, systems, tools, games & anything else...</p>
 </div>

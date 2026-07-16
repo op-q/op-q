@@ -12,14 +12,8 @@
 &nbsp;·&nbsp;
 <code>Rust</code>
 &nbsp;·&nbsp;
-<code>Next.js</code>
+<code>Go</code>
 &nbsp;·&nbsp;
-<code>Postgres</code>
-&nbsp;·&nbsp;
-<code>WebSockets</code>
-&nbsp;·&nbsp;
-<code>Access Control</code>
-&nbsp;·&nbsp;
-<code>Protocol Design</code>
+<code>Typescript</code>
 </p>
 </div>

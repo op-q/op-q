@@ -26,7 +26,11 @@ op-q@github:~/projects$ <strong>ls -l</strong><br>
 &nbsp;&nbsp;&nbsp;&nbsp;└─ <strong>GAME</strong> | A duel of speed, precision & perseverance<br>
 <br>
 
-4 directories, 0 files<br>
+05&nbsp;&nbsp;<strong>Ferry</strong>&nbsp;&nbsp;&nbsp;&nbsp;........................&nbsp;&nbsp;<a href="https://github.com/op-q/ferry">CODE</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;└─ <strong>SYSTEM</strong> | A transactional outbox relay<br>
+<br>
+
+5 directories, 0 files<br>
 <br>
 op-q@github:~/projects$ ▋
 </samp>

@@ -22,7 +22,7 @@ op-q@github:~/projects$ <strong>ls -l</strong><br>
 &nbsp;&nbsp;&nbsp;&nbsp;└─ <strong>ASSISTANT</strong> | The Sleepy Collector • <code>Python</code><br>
 <br>
 
-04&nbsp;&nbsp;<strong>FUDŌ</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;........................&nbsp;&nbsp;DEV<br>
+04&nbsp;&nbsp;<strong>FUDŌ</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;........................&nbsp;&nbsp;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;└─ <strong>GAME</strong> | A duel of speed, precision & perseverance • <code>Godot</code><br>
 <br>
 

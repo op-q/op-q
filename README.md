@@ -10,11 +10,11 @@ Building platforms, systems, tools, games<br>
 op-q@github:~/projects$ <strong>ls -l</strong><br>
 <br>
 
-01&nbsp;&nbsp;Ponchii&nbsp;&nbsp;........................&nbsp;&nbsp;<a href="https://ponchii.com">LIVE</a><br>
+01&nbsp;&nbsp;<strong>Ponchii</strong>&nbsp;&nbsp;........................&nbsp;&nbsp;<a href="https://ponchii.com">LIVE</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;└─ <strong>PLATFORM</strong> | Every story deserves a world<br>
 <br>
 
-02&nbsp;&nbsp;<strong>Drop</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;........................&nbsp;&nbsp;<a href="https://drop.lifbom.com">LIVE</a>&nbsp;&nbsp;<a href="https://github.com/op-q/drop">CODE</a><br>
+02&nbsp;&nbsp;<strong>drop</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;........................&nbsp;&nbsp;<a href="https://drop.lifbom.com">LIVE</a>&nbsp;&nbsp;<a href="https://github.com/op-q/drop">CODE</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;└─ <strong>TOOL</strong> | Realtime file transfer<br>
 <br>
 

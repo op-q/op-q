@@ -1,5 +1,5 @@
 <samp>
-lucas@github:~$ <strong>whoami</strong><br>
+op-q@github:~$ <strong>whoami</strong><br>
 <br>
 <strong>LUCAS</strong><br>
 SOFTWARE ENGINEER<br>
@@ -8,7 +8,7 @@ Building platforms, systems, tools, games<br>
 & anything else<br>
 <br>
 <br>
-lucas@github:~/projects$ <strong>ls -l</strong><br>
+op-q@github:~/projects$ <strong>ls -l</strong><br>
 <br>
 01&nbsp;&nbsp;ponchii&nbsp;&nbsp;...........................&nbsp;&nbsp;<a href="https://ponchii.com">LIVE</a><br>
 <br>
@@ -18,7 +18,7 @@ lucas@github:~/projects$ <strong>ls -l</strong><br>
 <br>
 3 directories, 0 files<br>
 <br>
-lucas@github:~/projects$ ▋
+op-q@github:~/projects$ ▋
 </samp>
 
 <br clear="all">

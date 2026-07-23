@@ -15,7 +15,7 @@ op-q@github:~/projects$ <strong>ls -ltr</strong><br>
 &nbsp;&nbsp;&nbsp;&nbsp;└─ TOOL - Realtime file transfer<br>
 <br>
 
-03&nbsp;&nbsp;<strong>blob</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;........................&nbsp;&nbsp;PRIVATE<br>
+03&nbsp;&nbsp;<strong>blob</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;........................&nbsp;&nbsp;<a href="https://github.com/op-q/blob">CODE</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;└─ COMPANION - The Sleepy Collector<br>
 <br>
 

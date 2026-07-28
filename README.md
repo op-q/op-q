@@ -20,7 +20,7 @@ op-q@github:~/projects$ <strong>ls -ltr</strong><br>
 <br>
 
 04&nbsp;&nbsp;<strong>retrace</strong>&nbsp;&nbsp;........................&nbsp;&nbsp;<a href="https://github.com/op-q/retrace">CODE</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;└ SYSTEM - Process recorder and fault-injection<br>
+&nbsp;&nbsp;&nbsp;&nbsp;└ SYSTEM - Recorder and fault-injection<br>
 <br>
 
 05&nbsp;&nbsp;<strong>turtle</strong>&nbsp;&nbsp;&nbsp;........................&nbsp;&nbsp;<a href="https://github.com/op-q/turtle">CODE</a><br>
@@ -28,7 +28,7 @@ op-q@github:~/projects$ <strong>ls -ltr</strong><br>
 <br>
 
 06&nbsp;&nbsp;<strong>ferry</strong>&nbsp;&nbsp;&nbsp;&nbsp;........................&nbsp;&nbsp;<a href="https://github.com/op-q/ferry">CODE</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;└─ SYSTEM - Transactional outbox relay<br>
+&nbsp;&nbsp;&nbsp;&nbsp;└ SYSTEM - Transactional outbox relay<br>
 <br>
 
 

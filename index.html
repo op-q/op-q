@@ -137,7 +137,6 @@
         padding: 24px;
         border-right: 1px solid var(--line);
         border-bottom: 1px solid var(--line);
-        text-decoration: none;
         flex-direction: column;
         transition:
           background 150ms ease,
@@ -145,10 +144,9 @@
       }
 
       .project:hover,
-      .project:focus-visible {
+      .project:focus-within {
         background: var(--text);
         color: var(--background);
-        outline: none;
       }
 
       .project-meta {
@@ -163,7 +161,7 @@
       }
 
       .project:hover .project-type,
-      .project:focus-visible .project-type {
+      .project:focus-within .project-type {
         color: #aaa;
       }
 
@@ -186,8 +184,42 @@
       }
 
       .project:hover p,
-      .project:focus-visible p {
+      .project:focus-within p {
         color: #c8c8c3;
+      }
+
+      .project-actions {
+        display: flex;
+        gap: 18px;
+        margin-top: 24px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 0.72rem;
+      }
+
+      .project-link {
+        text-decoration: none;
+        text-underline-offset: 4px;
+      }
+
+      a.project-link:hover {
+        text-decoration: underline;
+      }
+
+      a.project-link:focus-visible {
+        border-radius: 2px;
+        outline: 2px solid currentColor;
+        outline-offset: 4px;
+      }
+
+      .project-link[aria-disabled="true"] {
+        color: var(--muted);
+        cursor: not-allowed;
+        opacity: 0.45;
+      }
+
+      .project:hover .project-link[aria-disabled="true"],
+      .project:focus-within .project-link[aria-disabled="true"] {
+        color: #aaa;
       }
 
       footer {
@@ -281,71 +313,131 @@
           </div>
 
           <div class="projects">
-            <a class="project" href="https://ponchii.com">
+            <article class="project" aria-labelledby="project-ponchii">
               <div class="project-meta">
                 <span>01</span>
                 <span class="project-type">Platform</span>
               </div>
               <div class="project-copy">
-                <h3>Ponchii</h3>
+                <h3 id="project-ponchii">Ponchii</h3>
                 <p>Every story deserves a world.</p>
               </div>
-            </a>
+              <div class="project-actions" aria-label="Ponchii links">
+                <span class="project-link" aria-disabled="true">Code</span>
+                <a
+                  class="project-link"
+                  href="https://ponchii.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Live ↗</a
+                >
+              </div>
+            </article>
 
-            <a class="project" href="https://github.com/op-q/drop">
+            <article class="project" aria-labelledby="project-drop">
               <div class="project-meta">
                 <span>02</span>
                 <span class="project-type">Tool</span>
               </div>
               <div class="project-copy">
-                <h3>drop</h3>
+                <h3 id="project-drop">drop</h3>
                 <p>Realtime file transfer.</p>
               </div>
-            </a>
+              <div class="project-actions" aria-label="drop links">
+                <a
+                  class="project-link"
+                  href="https://github.com/op-q/drop"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Code ↗</a
+                >
+                <span class="project-link" aria-disabled="true">Live</span>
+              </div>
+            </article>
 
-            <a class="project" href="https://github.com/op-q/blob">
+            <article class="project" aria-labelledby="project-blob">
               <div class="project-meta">
                 <span>03</span>
                 <span class="project-type">Companion</span>
               </div>
               <div class="project-copy">
-                <h3>BLOB</h3>
+                <h3 id="project-blob">BLOB</h3>
                 <p>The sleepy collector.</p>
               </div>
-            </a>
+              <div class="project-actions" aria-label="BLOB links">
+                <a
+                  class="project-link"
+                  href="https://github.com/op-q/blob"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Code ↗</a
+                >
+                <span class="project-link" aria-disabled="true">Live</span>
+              </div>
+            </article>
 
-            <a class="project" href="https://github.com/op-q/retrace">
+            <article class="project" aria-labelledby="project-retrace">
               <div class="project-meta">
                 <span>04</span>
                 <span class="project-type">System</span>
               </div>
               <div class="project-copy">
-                <h3>retrace</h3>
+                <h3 id="project-retrace">retrace</h3>
                 <p>Recorder and fault-injection.</p>
               </div>
-            </a>
+              <div class="project-actions" aria-label="retrace links">
+                <a
+                  class="project-link"
+                  href="https://github.com/op-q/retrace"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Code ↗</a
+                >
+                <span class="project-link" aria-disabled="true">Live</span>
+              </div>
+            </article>
 
-            <a class="project" href="https://github.com/op-q/turtle">
+            <article class="project" aria-labelledby="project-turtle">
               <div class="project-meta">
                 <span>05</span>
                 <span class="project-type">Tool</span>
               </div>
               <div class="project-copy">
-                <h3>turtle</h3>
+                <h3 id="project-turtle">turtle</h3>
                 <p>Project workflow vault.</p>
               </div>
-            </a>
+              <div class="project-actions" aria-label="turtle links">
+                <a
+                  class="project-link"
+                  href="https://github.com/op-q/turtle"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Code ↗</a
+                >
+                <span class="project-link" aria-disabled="true">Live</span>
+              </div>
+            </article>
 
-            <a class="project" href="https://github.com/op-q/ferry">
+            <article class="project" aria-labelledby="project-ferry">
               <div class="project-meta">
                 <span>06</span>
                 <span class="project-type">System</span>
               </div>
               <div class="project-copy">
-                <h3>Ferry</h3>
+                <h3 id="project-ferry">Ferry</h3>
                 <p>Transactional outbox relay.</p>
               </div>
-            </a>
+              <div class="project-actions" aria-label="Ferry links">
+                <a
+                  class="project-link"
+                  href="https://github.com/op-q/ferry"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Code ↗</a
+                >
+                <span class="project-link" aria-disabled="true">Live</span>
+              </div>
+            </article>
           </div>
         </section>
       </main>

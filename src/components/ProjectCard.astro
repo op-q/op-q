@@ -1,0 +1,81 @@
+---
+interface Props {
+  number: string;
+  slug: string;
+  type: string;
+  name: string;
+  description: string;
+  codeUrl?: string;
+  liveUrl?: string;
+  hasCaseStudy?: boolean;
+  caseStudyUrl?: string;
+}
+
+const {
+  number,
+  slug,
+  type,
+  name,
+  description,
+  codeUrl,
+  liveUrl,
+  hasCaseStudy = false,
+  caseStudyUrl,
+} = Astro.props;
+---
+
+<article class="project" aria-labelledby={`project-${slug}`}>
+  <div class="project-meta">
+    <span>{number}</span>
+    <span class="project-type">{type}</span>
+  </div>
+  <div class="project-copy">
+    <h3 id={`project-${slug}`}>{name}</h3>
+    <p>{description}</p>
+  </div>
+  <div class="project-actions" aria-label={`${name} links`}>
+    {
+      codeUrl ? (
+        <a
+          class="project-link"
+          href={codeUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Code ↗
+        </a>
+      ) : (
+        <span class="project-link" aria-disabled="true">Code</span>
+      )
+    }
+    {
+      liveUrl ? (
+        <a
+          class="project-link"
+          href={liveUrl}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Live ↗
+        </a>
+      ) : (
+        <span class="project-link" aria-disabled="true">Live</span>
+      )
+    }
+    {
+      hasCaseStudy &&
+        (caseStudyUrl ? (
+          <a class="project-link case-study-link" href={caseStudyUrl}>
+            Case study →
+          </a>
+        ) : (
+          <span
+            class="project-link case-study-link"
+            aria-disabled="true"
+          >
+            Case study
+          </span>
+        ))
+    }
+  </div>
+</article>

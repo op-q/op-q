@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Page not found — Lucas Lifbom"
+  description="The requested page could not be found."
+  canonicalPath="/404/"
+  noindex
+>
+  <section class="intro not-found" aria-labelledby="not-found-title">
+    <p class="label">404 / Not found</p>
+    <div class="not-found-copy">
+      <h1 id="not-found-title">There’s nothing here.</h1>
+      <a class="return-link" href="/">Back to the landing page →</a>
+    </div>
+  </section>
+</BaseLayout>

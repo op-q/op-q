@@ -1,0 +1,157 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  type?: "website" | "profile" | "article";
+  noindex?: boolean;
+  image?: string;
+}
+
+const {
+  title,
+  description,
+  canonicalPath = Astro.url.pathname,
+  type = "website",
+  noindex = false,
+  image,
+} = Astro.props;
+
+const siteUrl = Astro.site ?? new URL("https://lifbom.com");
+const canonicalUrl = new URL(canonicalPath, siteUrl);
+const imageUrl = image ? new URL(image, siteUrl) : undefined;
+const isHomePage = canonicalUrl.pathname === "/";
+const robots = noindex
+  ? "noindex, nofollow"
+  : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
+
+const profileStructuredData = isHomePage
+  ? {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${siteUrl.href}#website`,
+          url: siteUrl.href,
+          name: "Lucas Lifbom",
+          alternateName: "op-q",
+          inLanguage: "en",
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": `${siteUrl.href}#profile`,
+          url: canonicalUrl.href,
+          name: title,
+          isPartOf: {
+            "@id": `${siteUrl.href}#website`,
+          },
+          mainEntity: {
+            "@type": "Person",
+            "@id": `${siteUrl.href}#lucas-lifbom`,
+            name: "Lucas Lifbom",
+            alternateName: "op-q",
+            url: siteUrl.href,
+            jobTitle: "Software Engineer",
+            image: imageUrl?.href,
+            sameAs: [
+              "https://github.com/op-q",
+              "https://linkedin.com/in/lucas-lifbom",
+            ],
+          },
+        },
+      ],
+    }
+  : undefined;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Lucas Lifbom" />
+    <meta name="creator" content="Lucas Lifbom" />
+    <meta name="robots" content={robots} />
+    <title>{title}</title>
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="me" href="https://github.com/op-q" />
+    <link rel="me" href="https://linkedin.com/in/lucas-lifbom" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Lucas Lifbom" />
+    {imageUrl && <meta property="og:image" content={imageUrl} />}
+    {
+      imageUrl && (
+        <meta property="og:image:alt" content="Portrait of Lucas Lifbom" />
+      )
+    }
+    {
+      type === "profile" && (
+        <>
+          <meta property="profile:first_name" content="Lucas" />
+          <meta property="profile:last_name" content="Lifbom" />
+          <meta property="profile:username" content="op-q" />
+        </>
+      )
+    }
+
+    <meta
+      name="twitter:card"
+      content={imageUrl ? "summary_large_image" : "summary"}
+    />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+    {
+      imageUrl && (
+        <meta name="twitter:image:alt" content="Portrait of Lucas Lifbom" />
+      )
+    }
+
+    {
+      profileStructuredData && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(profileStructuredData)}
+        />
+      )
+    }
+  </head>
+
+  <body>
+    <div class="page">
+      <header>
+        <div class="identity">
+          <a href="/" class="name" >op-q</a>
+          <p class="role">Software Engineer</p>
+        </div>
+        <nav class="links" aria-label="Social links">
+          <a href="https://github.com/op-q" rel="me">github ↗</a>
+          <a href="https://linkedin.com/in/lucas-lifbom" rel="me"
+            >linkedin ↗</a
+          >
+        </nav>
+      </header>
+
+      <main>
+        <slot />
+      </main>
+
+      <footer>
+        <div class="links">
+          <a href="https://github.com/op-q" rel="me">github</a>
+          <a href="https://linkedin.com/in/lucas-lifbom" rel="me">linkedin</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

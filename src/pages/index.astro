@@ -1,0 +1,116 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const publishedCaseStudies = new Set(
+  (
+    await getCollection("caseStudies", ({ data }) => !data.draft)
+  ).map(({ id }) => id),
+);
+
+const projects = [
+  {
+    number: "01",
+    slug: "ponchii",
+    type: "Platform",
+    name: "Ponchii",
+    description: "Every story deserves a world.",
+    liveUrl: "https://ponchii.com",
+    caseStudySlug: "ponchii",
+  },
+  {
+    number: "02",
+    slug: "drop",
+    type: "Tool",
+    name: "drop",
+    description: "Realtime file transfer.",
+    codeUrl: "https://github.com/op-q/drop",
+    liveUrl: "https://drop.lifbom.com",
+  },
+  {
+    number: "03",
+    slug: "blob",
+    type: "Companion",
+    name: "BLOB",
+    description: "The sleepy collector.",
+    codeUrl: "https://github.com/op-q/blob",
+  },
+  {
+    number: "04",
+    slug: "retrace",
+    type: "System",
+    name: "retrace",
+    description: "Recorder and fault-injection.",
+    codeUrl: "https://github.com/op-q/retrace",
+  },
+  {
+    number: "05",
+    slug: "turtle",
+    type: "Tool",
+    name: "turtle",
+    description: "Project workflow vault.",
+    codeUrl: "https://github.com/op-q/turtle",
+  },
+  {
+    number: "06",
+    slug: "ferry",
+    type: "System",
+    name: "Ferry",
+    description: "Transactional outbox relay.",
+    codeUrl: "https://github.com/op-q/ferry",
+  },
+];
+---
+
+<BaseLayout
+  title="Lucas Lifbom (op-q) — Software Engineer"
+  description="Lucas Lifbom, also known as op-q, is a software engineer building tools, systems, and products."
+  type="profile"
+>
+  <section class="intro about-section" aria-labelledby="intro-title">
+    <p class="label about-label">00 / Lucas Lifbom</p>
+
+    <h1 class="about-heading" id="intro-title">
+      I build software and tinker with hardware.
+    </h1>
+
+    <a
+      class="about-code-link"
+      href="https://github.com/op-q/op-q"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Code ↗
+    </a>
+  </section>
+
+  <section class="projects-section" aria-labelledby="projects-title">
+    <div class="section-heading">
+      <h2 id="projects-title">Selected projects</h2>
+      <p class="label">01—06</p>
+    </div>
+
+    <div class="projects">
+      {
+        projects.map((project) => {
+          const caseStudySlug = "caseStudySlug" in project
+            ? project.caseStudySlug
+            : undefined;
+          const caseStudyUrl =
+            caseStudySlug && publishedCaseStudies.has(caseStudySlug)
+              ? `/work/${caseStudySlug}/`
+              : undefined;
+
+          return (
+            <ProjectCard
+              {...project}
+              hasCaseStudy={Boolean(caseStudySlug)}
+              caseStudyUrl={caseStudyUrl}
+            />
+          );
+        })
+      }
+    </div>
+  </section>
+</BaseLayout>

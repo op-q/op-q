@@ -3,7 +3,6 @@ op-q@github:~$ <strong>whoami</strong><br>
 <br>
 Lucas- software engineer<br>
 Building things i find interesting<br>
-<a href="https://linkedin.com/in/lucas-lifbom">linkedin.com/in/lucas-lifbom</a><br>
 <br>
 op-q@github:~/projects$ <strong>ls -ltr</strong><br>
 <br>

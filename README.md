@@ -4,10 +4,8 @@
 </a>
 <br>
 
-**Software Engineer**<br>
-Backend<br>
-Full-Stack<br>
-Tools<br>
+**Backend Engineer**<br>
+with full-stack experience
 
 **Check out**<br>
 [lifbom.com](https://lifbom.com)<br>
